@@ -101,7 +101,8 @@ dpkg_list(
         "libcurl3",
         "curl",
         "git",
-        "coreutils"
+        "coreutils",
+        "gzip"
     ],
     sources = [
         "@debian_stretch_security//file:Packages.json",

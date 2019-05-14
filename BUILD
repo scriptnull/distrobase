@@ -62,7 +62,8 @@ container_image(
         packages["libcurl3"],
         packages["curl"],
         packages["git"],
-        packages["coreutils"]
+        packages["coreutils"],
+        packages["gzip"]
     ],
     env = {"PATH": "$PATH:/nodejs/bin/"},
     repository = "drydock/distrobase"
