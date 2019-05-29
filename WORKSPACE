@@ -137,6 +137,7 @@ container_pull(
 
 http_archive(
     name = "nodejs",
+    build_file = "//file:BUILD.nodejs"
     sha256 = "b391450e0fead11f61f119ed26c713180cfe64b363cd945bac229130dfab64fa",
     strip_prefix = "node-v8.16.0-linux-x64/",
     type = "tar.gz",
