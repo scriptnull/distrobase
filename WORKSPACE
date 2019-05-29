@@ -128,9 +128,17 @@ container_repositories()
 load("@io_bazel_rules_docker//container:container.bzl", "container_pull")
 
 container_pull(
-    name = "nodejs",
+    name = "cc",
     registry = "gcr.io",
-    repository = "distroless/nodejs",
-    digest = "sha256:35da7f3e98660f26928cfc260591a6bb8e4e9fbe4680da1532e4f8586967838a",
+    repository = "distroless/cc",
+    digest = "sha256:f4dddc007e81bf9a8dfbf6a07a0db5c70292bed76dca896f7d4833f6f33eed2f",
     tag = "latest"
+)
+
+http_archive(
+    name = "nodejs",
+    sha256 = "b391450e0fead11f61f119ed26c713180cfe64b363cd945bac229130dfab64fa",
+    strip_prefix = "node-v8.16.0-linux-x64/",
+    type = "tar.gz",
+    urls = ["https://nodejs.org/dist/v8.16.0/node-v8.16.0-linux-x64.tar.gz"],
 )
