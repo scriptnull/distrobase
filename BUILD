@@ -5,7 +5,7 @@ load("@package_bundle//file:packages.bzl", "packages")
 
 container_image(
     name = "master",
-    base = "@nodejs//image:image.tar",
+    base = "@cc//image:image.tar",
     debs = [
         packages["libssl1.0.2"],
         packages["openssh-client"],
@@ -65,6 +65,8 @@ container_image(
         packages["coreutils"],
         packages["gzip"]
     ],
+    entrypoint = ["/nodejs/bin/node"],
+    tars = ["@nodejs//:tar"],
     env = {"PATH": "$PATH:/nodejs/bin/"},
     repository = "drydock/distrobase"
 )
