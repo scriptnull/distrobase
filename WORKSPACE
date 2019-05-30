@@ -102,6 +102,7 @@ dpkg_list(
         "curl",
         "git",
         "coreutils",
+        "python",
         "gzip"
     ],
     sources = [
