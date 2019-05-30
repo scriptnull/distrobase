@@ -63,6 +63,7 @@ container_image(
         packages["curl"],
         packages["git"],
         packages["coreutils"],
+        packages["python"],
         packages["gzip"]
     ],
     entrypoint = ["/nodejs/bin/node"],
